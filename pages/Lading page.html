@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lading page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black h-screen">
+    <div class="container">
+        <header class="pt-[30px]">
+            <div class="flex justify-end me-[20px]">
+                <img class=" mb-[20px]" src="../Imagenes/Vector (7).png" alt="">
+            </div>
+            <div class="text-center">
+                <input
+                    class="rounded w-[80%] py-[8px] px-[5px] bg-[#FFA410] placeholder:font-bold placeholder:text-[#000000] text-center"
+                    type="text" placeholder="What are you looking for today?" id="input">
+            </div>
+        </header>
+
+        <main>
+            <div class="flex justify-between px-[20px] mt-[20px] mb-[15px]">
+                <h2 class="text-[#FFA410] text-2xl font-bold">Featured</h2>
+                <h6 class="text-[#FFffff] text-base font-bold">See All(17)</h6>
+            </div>
+            <div class="flex justify-center gap-3 text-center mt-5 font-bold">
+                <figure class="relative card card1">
+                    <img src="../Imagenes/Rectangle 3.png" alt="">
+                    <p class="text-white text-center text-[10px]">Amy’s mock Interviews</p>
+                    <div class="flex items-center absolute hijo1 top-1 left-11 bg-[#0f040461] rounded-full px-[3px]">
+                        <img class="h-[17px]" src="../Imagenes/Vector (8).png" alt="">
+                        <p class="text-[#FFA410]">4.7</p>
+                    </div>
+                </figure>
+                <figure class="relative card card2">
+                    <img src="../Imagenes/Rectangle 4 (1).png" alt="">
+                    <p class="text-white text-center text-[10px]">Lion Tutors</p>
+                    <div class="flex items-center absolute hijo2 top-1 left-11 bg-[#0f040461] rounded-full px-[3px]">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                        <p class="text-[#FFA410]">4.5</p>
+                    </div>
+                </figure>
+                <figure class="relative card card3">
+                    <img src="../Imagenes/Rectangle 5.png" alt="">
+                    <p class="text-white text-center text-[10px]">Jacob’s resume tips</p>
+                    <div class="flex items-center absolute hijo3 top-1 left-11 bg-[#0f040461] rounded-full px-[3px]">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                        <p class="text-[#FFA410]">4.8</p>
+                    </div>
+                </figure>
+            </div>
+
+            <div>
+                <div class="flex justify-between px-[20px] mt-[20px] mb-[15px]">
+                    <h2 class="text-[#FFA410] text-xl font-bold">Graphics and Design</h2>
+                    <h6 class="text-[#FFffff] mt-[3px] text-base font-bold">See All (17)</h6>
+                </div>
+                <div class="flex justify-center gap-4 text-center mt-5 font-bold">
+                    <figure class="card card4">
+                        <img src="../Imagenes/Rectangle 6.png" alt="">
+                        <p class="text-white text-center text-[11px]">Poster Design</p>
+                    </figure>
+                    <figure class="card card5">
+                        <img src="../Imagenes/Rectangle 7 (1).png" alt="">
+                        <p class="text-white text-center text-[11px]">Vector Illustrations</p>
+                    </figure>
+                    <figure class="card card6">
+                        <img src="../Imagenes/Rectangle 8.png" alt="">
+                        <p class="text-white text-center text-[11px]">Photography</p>
+                    </figure>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between px-[20px] mt-[20px] mb-[15px]">
+                    <h2 class="text-[#FFA410] text-2xl font-bold">Hobbies</h2>
+                    <h6 class="text-[#FFffff] mt-[3px] text-base font-bold">See All (29)</h6>
+                </div>
+                <div class="flex justify-center gap-4 text-center mt-5 font-bold">
+                    <figure class="card card7">
+                        <img src="../Imagenes/Rectangle 9 (1).png" alt="">
+                        <p class="text-white text-center text-[11px]">Music</p>
+                    </figure>
+                    <figure class="card card8">
+                        <img src="../Imagenes/Rectangle 10.png" alt="">
+                        <p class="text-white text-center text-[11px]">Sports</p>
+                    </figure>
+                    <figure class="card card9">
+                        <img src="../Imagenes/Rectangle 11.png" alt="">
+                        <p class="text-white text-center text-[11px]">Debate</p>
+                    </figure>
+                </div>
+            </div>
+        </main>
+
+        <div>
+            <div id="defaultModal" tabindex="-1" aria-hidden="true"
+                class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-2xl max-h-full">
+                    <!-- contenido modal -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-900">
+                        <!-- encabezado modal -->
+                        <div class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-xl font-semibold ms-8 text-gray-900 text-center dark:text-white textoss">
+                                Amy’s mock Interviews
+                            </h3>
+                            <button type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                data-modal-hide="defaultModal">
+                                <svg class="w-3 h-3 cerrar" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- cuerpo modal -->
+                        <div class="p-6 space-y-6 text-center flex flex-col items-center">
+                            <img class="w-[50%] imgss" src="../Imagenes/Rectangle 3.png" alt="">
+                            <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                McKinsey, one of the Big 3 consulting firms, offers more than 500 vacancies on its
+                                website. Those with a Master's or Doctorate who get a job at this company can earn up to
+                                around 215,000 euros, according to Management Consuld data for 2022. In addition,
+                                fellows who repeat with McKinsey get a 50% refund of their second-year tuition.
+                            </p>
+                            <div class="flex h-auto max-w-lg gap-3 w-[30px]">
+                                <img src="../Imagenes/whatsapp.png" alt="">
+                                <img src="../Imagenes/facebook.png" alt="">
+                                <img src="../Imagenes/instagram.png" alt="">
+                                <img src="../Imagenes/gorjeo.png" alt="">
+                            </div>
+                        </div>
+                        <!-- modal pie de página -->
+                        <div
+                            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button data-modal-hide="defaultModal" type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I
+                                accept</button>
+                            <button data-modal-hide="defaultModal" type="button"
+                                class="close text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="flex justify-center mt-4">
+                <button class="rounded-full w-[75%] py-[8px] bg-[#FFA410] text-center font-bold text-[20px]">Show more
+                    categories</button>
+            </div>
+
+            <div class="flex flex-row justify-center gap-3 bg-[#FFA410] mt-5 rounded-full py-[5px]">
+                <div class="me-[13px] ms-[15px]">
+                    <img class="w-[30px]" src="../Imagenes/home.png" alt="">
+                    <p class="font-bold text-[13px]">Home</p>
+                </div>
+                <div class="me-[13px]">
+                    <img class="w-[30px]" src="../Imagenes/search-interface-symbol.png" alt="">
+                    <p class="font-bold text-[13px]">Search</p>
+                </div>
+                <div class="flex flex-col items-center me-[13px]">
+                    <img class="w-[30px]" src="../Imagenes/add.png" alt="">
+                    <p class="font-bold text-[13px]">Create</p>
+                </div>
+                <div class="flex flex-col items-center me-[13px]">
+                    <img class="w-[30px]" src="../Imagenes/speedometer.png" alt="">
+                    <p class="font-bold text-[13px]">Dashboard</p>
+                </div>
+                <div class="flex flex-col items-center me-[13px]">
+                    <img class="w-[30px]" src="../Imagenes/user.png" alt="">
+                    <p class="font-bold text-[13px]">Profile</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll(".card");
+        const input = document.querySelector("#input");
+        const card1 = document.querySelector(".card1");
+        const popupOne = document.querySelector("#defaultModal");
+        const cerrarPopup = document.querySelectorAll(".cerrar");
+        const closePopup = document.querySelector(".close")
+        const card2 = document.querySelector(".card2");
+        const popupTwo = document.querySelector("#defaultModal2");
+        const textoss = document.querySelector(".textoss");
+        const imgss = document.querySelector(".imgss");
+
+        let titulos = [cards[0].children[1].textContent, cards[1].children[1].textContent, cards[2].children[1].textContent]
+
+        input.addEventListener("keyup",
+            function () {
+                cards.forEach(
+                    function (carta) {
+                        if (carta.children[1].textContent.toLocaleLowerCase().includes(input.value.toLocaleLowerCase())) {
+                            carta.classList.remove('hidden')
+                        } else {
+                            carta.classList.add('hidden')
+                        }
+                    }
+                )
+            })
+        // poputOne.addEventListener("click",
+        //     () => {
+        //         window.location.href = "./splash screen.html"
+        //     })
+
+        //abrir popup
+        card1.addEventListener("click", () => {
+            popupOne.classList.remove("hidden")
+            popupOne.classList.add("flex")
+        })
+
+        card2.addEventListener("click", () => {
+            popupTwo.classList.remove("hidden")
+            popupTwo.classList.add("flex")
+        })
+
+        //cerrar popup
+        cerrarPopup.forEach(
+            (e) => {
+                e.addEventListener("click", () => {
+                    popupOne.classList.remove("flex")
+                    popupOne.classList.add("hidden")
+                })
+            }
+
+        )
+        closePopup.addEventListener("click", () => {
+            popupOne.classList.remove("flex")
+            popupOne.classList.add("hidden")
+        })
+
+        closePopup.addEventListener("click", () => {
+            popupTwo.classList.remove("flex")
+            popupTwo.classList.add("hidden")
+        })
+
+        cards.forEach(
+            (e)=>{
+                e.addEventListener("click",(e)=>{
+                    console.log(e.target.parentNode)
+                    console.log("La img es:"+e.target.parentNode.children[0].src)
+                    console.log("El texto es:"+e.target.parentNode.children[1].textContent)
+                    popupOne.classList.add("flex")
+                    popupOne.classList.remove("hidden")
+                    textoss.textContent = e.target.parentNode.children[1].textContent;
+                    imgss.src =  e.target.parentNode.children[0].src;
+                }
+                
+                )
+            }
+        )
+    </script>
+</body>
+
+</html>

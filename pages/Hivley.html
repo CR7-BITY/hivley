@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIVLEY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="C:\Users\David\Documents\SYNTACTIC\INTRODUCCIÓN\Tailwind\Imagenes/Hivley_bee.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div class="container bg-black h-screen w-[100] mx-auto flex items-center justify-center flex-col">
+        <h6 class="text-white font-bold">Welcome to the Hive!</h6>
+        <h6 class="text-[#FFA410] font-bold">Let’s get you started.</h6>
+        <form action="" class="flex justify-center flex-col gap-4 mt-[15%]">
+            <input type="text" class="rounded px-[10px] py-[9px]" placeholder="Enter your name" id="user" required>
+            <input type="email" class="rounded px-[10px] py-[9px]" placeholder="Enter your email" id="email" required>
+            <input type="password" class="rounded px-[10px] py-[9px]" placeholder="Enter password" id="pass" required>
+        </form>
+        <button class="bg-[#FFA410] px-[70px] mt-[10%] font-bold rounded-full py-[5px]" id="register"
+            onclick="registro()">Register</button>
+        <p class="text-white mt-[3%]">Already have an account? <button class="text-[#FFA410]" id="abrirModal">Sign
+                In</button></p>
+        <h5 class="text-[red]"></h5>
+    </div>
+
+    <dialog
+        class="popup-out h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 w-screen flex items-center justify-center hidden">
+        <div class="popup-in bg-white w-[50%] h-[50%] flex items-center justify-center flex-col">
+            <h2 class="font-bold text-xl">Sign In</h2>
+            <form action="" class="flex justify-center flex-col gap-4 mt-[15%] items-center">
+                <input type="text" class="rounded px-[10px] w-[70%] border border-black py-[1px]" placeholder="Users" id="user1" required>
+                <input type="password" class="rounded px-[10px] w-[70%] border border-black py-[1px]"
+                    placeholder="password" id="pass1" required>
+            </form>
+            <button class="bg-[#FFA410] px-[50px] mt-[10%] font-bold rounded-full py-[5px] close-popup"
+                id="popup-login">Login</button>
+            <button class="bg-[#FFA410] px-[50px] font-bold mt-[10%] rounded-full py-[5px] py-[5px]"
+                id="cerrar">Cerrar</button>
+
+        </div>
+    </dialog>
+
+    <script>
+        const input = document.querySelector("#email");
+        const input1 = document.querySelector("#user");
+        const input2 = document.querySelector("#pass");
+        const boton = document.querySelector("#register");
+        const boton1 = document.querySelector("#abrirModal");
+        const cerrarModal = document.querySelector("#cerrar");
+        const popup = document.querySelector(".popup-out");
+        const close = document.querySelector(".close-popup");
+        const alerta = document.querySelector("h5");
+        const usuario = document.querySelector("#user1");
+        const password = document.querySelector("#pass1");
+        const botonLogin = document.querySelector("#popup-login");
+
+        //evento que añade función de validacion de login, comparacion de LocalStorage con inputs de popup
+        botonLogin.addEventListener("click", ()=>{
+            if (usuario.value  == localStorage.user && password.value == localStorage.contraseña) {
+                alert("El usuario es correcto")
+                window.location.href = "./Lading page.html";
+            }else{
+                alert("El usuario está mal")
+            }
+        })
+
+        //almacenamiento de localstorage
+        function registro() {
+            localStorage.email = input.value;
+            localStorage.user = input1.value;
+            localStorage.contraseña = input2.value;
+        }
+        boton.addEventListener("click",
+            () => {
+                if ((input.value == null || input.value == "") || (input1.value == null || input1.value == "")
+                    || (input2.value == null || input2.value == "")) {
+                    alerta.classList.remove("text-[blue]");
+                    alerta.classList.add("text-[red]");
+                    alerta.innerHTML = "Debe llenar los campos"
+                } else {
+                    alerta.innerHTML = "Se guardaron los elementos!";
+                    alerta.classList.remove("text-[red]");
+                    alerta.classList.add("text-[blue]");
+
+
+                }
+            }
+        )
+        //abrir popup
+        boton1.addEventListener("click", () => {
+            popup.classList.remove("hidden")
+            popup.classList.add("flex")
+        })
+
+        //cerrar popup
+        cerrarModal.addEventListener("click", () => {
+            popup.classList.remove("flex")
+            popup.classList.add("hidden")
+        })
+
+    </script>
+
+</body>
+
+</html>

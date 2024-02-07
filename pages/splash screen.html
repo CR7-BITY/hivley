@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splash screen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black h-screen">
+    <div class="container px-[10px] h-[100]">
+        <div class="ps-[12px] pt-[25px]">
+            <img class="w-[35px] flecha" src="../Imagenes/ic_round-arrow-back-ios-new.png" alt="">
+        </div>
+        <div class="flex w-[100] pt-[15px] items-center justify-center">
+            <img class="w-[90%]" src="../Imagenes/Rectangle 13.png" alt="">
+        </div>
+        <div class="ps-[22px] pt-[10px]">
+            <h2 class="text-[#FFA410] text-2xl font-bold mb-2">Gabriel’s studio</h2>
+            <p class="bg-white text-center w-[45%] pt-3 pb-3 rounded-lg font-bold">$20/Commision</p>
+        </div>
+        <div class="mt-5 ps-[22px]">
+            <h4 class="text-[#FFA410] text-xl font-bold font-bold">Description:</h4>
+            <p class="text-white font-bold">Hi I’m Gabriel, I’m a rising sophmore. I can make these for you:</p>
+            <ol class="text-white list-decimal ps-[17px] font-bold">
+                <li>Posters</li>
+                <li>Vector Illustrations</li>
+                <li>Photoshops Composites</li>
+                <li>Book covers</li>
+                <li>Social Media Banners</li>
+            </ol>
+            <br>
+            <p class="text-white font-bold">Please note: <br>Other services may be available on request (prices may vary)</p>
+        </div>
+        <div class="mt-5 ps-[22px]">
+            <h4 class="text-[#FFA410] text-xl font-bold mb-[20px]">Reviews</h4>
+            <div class="flex flex-row justify-between">
+                <img src="../Imagenes/Ellipse 1.png" alt="">
+                <div class="me-2">
+                    <h5 class="text-white font-bold">Lisa Markov</h5>
+                    <div class="flex flex-row">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                        <img src="../Imagenes/Vector (8).png" alt="">
+                    </div>
+                </div>
+                <p class="text-white text-xs opacity-50 mt-1">23rd January 2022</p>
+            </div>
+            <p class="text-white mt-4 font-bold w-[93%]">Gabriel is amazing, he helped me with my project even though I came to him last minute. He’s amazing at his work, I would highly recommend him for any graphic related work you may have.</p>
+            <p class="text-[#FFA410] text-center mt-3 font-bold">See All (23)</p>
+        </div>
+
+        <div class="flex flex-row justify-center gap-2 bg-[#FFA410] w-[102%] mt-7 rounded-full py-[5px] relative">
+            <div class="me-[13px] ms-[15px] flex flex-col items-center">
+                <img class="w-[30px]" src="../Imagenes/home.png" alt="">
+                <p class="font-bold text-[13px]">Home</p>
+            </div>
+            <div class="me-[13px]">
+                <img class="w-[30px]" src="../Imagenes/search-interface-symbol.png" alt="">
+                <p class="font-bold text-[13px]">Search</p>
+            </div>
+            <div class="flex flex-col items-center me-[13px]">
+                <img class="w-[30px]" src="../Imagenes/add.png" alt="">
+                <p class="font-bold text-[13px]">Create</p>
+            </div>
+            <div class="flex flex-col items-center me-[13px]">
+                <img class="w-[30px]" src="../Imagenes/speedometer.png" alt="">
+                <p class="font-bold text-[13px]">Dashboard</p>
+            </div>
+            <div class="flex flex-col items-center me-[15px]">
+                <img class="w-[30px]" src="../Imagenes/user.png" alt="">
+                <p class="font-bold text-[13px]">Profile</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cerrarPopup = document.querySelector(".flecha");
+
+        cerrarPopup.addEventListener("click",
+        ()=>{
+            window.location.href = "Lading page.html"
+        })
+    </script>
+</body>
+</html>
